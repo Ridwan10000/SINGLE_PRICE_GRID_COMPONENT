@@ -1,0 +1,142 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+:root{
+    --cyan:hsl(179, 62%, 43%);
+    --bright-yellow:hsl(71, 73%, 54%);
+    --light-gray:hsl(204, 43%, 93%);
+    --grayish-blue:hsl(218, 22%, 67%);
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--light-gray);
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+  .container{
+    width:90vw;
+    max-width: calc(375px * 0.9);
+    border-radius:0.5rem;
+    overflow: hidden;
+    box-shadow: 0 5px 15px 0;
+  }
+  section{
+    padding-left:1.5rem;
+    padding-top:1rem;
+    padding-bottom:1.5rem;
+  }
+  h1{
+    font-size: 1.3rem;
+  }
+  h2{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  section:nth-child(1){
+    background-color:rgb(255, 255, 255);
+    color:var(--grayish-blue);
+    line-height: 1.9rem;
+    
+  }
+  section:nth-child(1) > h1{
+    color: var(--cyan);
+    margin-bottom: 1.5rem;
+  }
+  section:nth-child(1) > h2{
+    color: var(--bright-yellow);
+  }
+  section:nth-child(2){
+    background-color: var(--cyan);
+    color:var(--light-gray);
+  }
+  section:nth-child(2) > h1{
+    margin-bottom: 0.7rem;
+  }
+  section:nth-child(2) > p{
+    color: hsl(100, 10%, 80%);
+  }
+  section:nth-child(2) > button{
+    width: 90%;
+    padding: 0.8rem 1rem;
+    margin:2rem auto 0 auto;
+    border-radius: 0.5rem;
+    border:none;
+    background-color: var(--bright-yellow);
+    box-shadow: 0px 4px 10px 0px;
+  }
+  .price-per-month{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+  }
+  .price-per-month > :nth-child(2){
+    color:hsl(100, 15%, 75%);
+  }
+  section:nth-child(3){
+    background-color: hsla(179, 64%, 45%, 0.8);
+    padding-right: 30%;
+    color:var(--light-gray);
+  }
+  section:nth-child(3) > p{
+    color:hsl(100, 15%, 90%);
+    margin-top: 1.5rem;
+  }
+  .big-dollar{
+    font-size: 1.9rem;
+  }
+  .bold{
+    font-weight: 700;
+  }
+
+  @media screen and (min-width:700px){
+    .container{
+      max-width: 700px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    section:nth-child(1){
+      grid-row: 1 / 2;
+      grid-column: 1 / 3;
+    }
+    section:nth-child(1) > h1{
+      margin-top: 1rem;
+    }
+    section:nth-child(2){
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+    }
+    section:nth-child(2) > button{
+      width: 85%;
+    }
+    section:nth-child(3){
+      grid-row:2 / 3;
+      grid-column: 2 / 3;
+    }
+  }
